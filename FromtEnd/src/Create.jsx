@@ -52,7 +52,7 @@ import { useNavigate } from 'react-router-dom';
         
                 // Vérifie s'il y a des erreurs avant d'envoyer les données
                 if (Object.keys(newErrors).length === 0) {
-                    axios.post('http://localhost:8081/student', formData) // Correction ici : utilisez formData au lieu de values
+                    axios.post('http://192.168.241.253:8081/student', formData) // Correction ici : utilisez formData au lieu de values
                         .then(res => {
                             console.log(res);
                             setFormData({ nom: '', email: '' }); // Réinitialise le formulaire après soumission

@@ -14,7 +14,7 @@
      })
 
     useEffect(() => {
-        axios.get(`http://localhost:8081/read/${id}`)
+        axios.get(`http://192.168.241.253:8081/read/${id}`)
         .then(res => {
             console.log(res)
             setValues({...values, name: res.data[0].Name, email: res.data[0].Email})
@@ -39,7 +39,7 @@
    
          const handleUpdate = (e) => {
             e.preventDefault();
-            axios.put(`http://localhost:8081/update/${id}`, values)
+            axios.put(`http://192.168.241.253:8081/update/${id}`, values)
             .then(res => {
                 console.log(res)
                 navigate('/')

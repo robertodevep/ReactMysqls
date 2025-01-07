@@ -10,7 +10,7 @@
           
       const [data, setData] = useState([])
     useEffect(()=> {
-        axios.get('http://localhost:8081/') // Fait une requête GET vers l'API à l'adresse http://localhost:8081/.
+        axios.get('http://192.168.241.253:8081/') // Fait une requête GET vers l'API à l'adresse http://localhost:8081/.
         .then(res => setData(res.data))
         // Si la requête réussit, la réponse (res.data) contient la liste des étudiants, et elle est enregistrée dans l'état data via setData
         .catch(err => console.log(err));
@@ -26,7 +26,7 @@
             // Utilisation de DELETE au lieu de GET
 
               if(window.confirm("voulez vous vraiment supprimer cet Etudiant ? .")){
-                axios.delete(`http://localhost:8081/delete/${id}`)
+                axios.delete(`http://192.168.241.253:8081/delete/${id}`)
                 .then(res => {
                     // Met à jour l'état pour supprimer l'élément de la liste sans recharger la page
                     setData(data.filter(student => student.ID !== id));
