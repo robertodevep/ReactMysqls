@@ -9,7 +9,7 @@
     // const { id } : Déstructure l'objet pour extraire directement la valeur du paramètre id
     const [student, setStudent] = useState([])
     useEffect(()=> {
-        axios.get(`http://192.168.241.253:8081/read/${id}`) // Effectue une requête HTTP GET vers le backend à l'URL donnée.
+        axios.get(`http://localhost:8081/read/${id}`) // Effectue une requête HTTP GET vers le backend à l'URL donnée.
         .then(res => {
             // res contient la réponse du serveur.
             //res.data contient les données renvoyées par le backend.
